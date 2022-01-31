@@ -11,6 +11,7 @@
 - 21. Merge Two Sorted Lists
 - 26. Remove Duplicates from Sroted Array
 - 27. Remove Element
+- 167. Two Sum II - Input Array Is Sorted
 - 169. Majority ELement
 
 #### Unsolved
