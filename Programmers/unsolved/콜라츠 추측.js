@@ -49,3 +49,4 @@ function solution(num) {
 }
 
 // => while 문 생각하면서 다시 한번 풀어보기
+// 다른 사람 풀이
