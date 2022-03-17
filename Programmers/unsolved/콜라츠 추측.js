@@ -27,7 +27,7 @@
 // 입출력 예 #3
 // 626331은 500번을 시도해도 1이 되지 못하므로 -1을 리턴해야합니다.
 
-// 내 풀이
+// 실패한 풀이
 
 function solution(num) {
   let result = num;
@@ -48,6 +48,49 @@ function solution(num) {
   }
 }
 
-// => while 문 생각하면서 다시 한번 풀어보기
-// 다른 사람 풀이
-// 깃허브 에러
+// 해결한 풀이
+
+function solution(num) {
+  let count = 0;
+
+  while (num !== 1) {
+    if (num % 2 === 0) {
+      num = num / 2;
+      count++;
+    } else {
+      num = num * 3 + 1;
+      count++;
+    }
+
+    if (count === 500) {
+      return -1;
+    }
+  }
+  return count;
+}
+
+// => while문을 반대로 이해했다.... 개념 확실히 짚고 넘어가기.
+
+// 다른 사람 풀이1
+
+function collatz(num, count = 0) {
+  return num == 1
+    ? count >= 500
+      ? -1
+      : count
+    : collatz(num % 2 == 0 ? num / 2 : num * 3 + 1, ++count);
+}
+
+// 다른 사람 풀이2
+
+function collatz(num) {
+  var answer = 0;
+  while (num != 1 && answer != 500) {
+    num % 2 == 0 ? (num = num / 2) : (num = num * 3 + 1);
+    answer++;
+  }
+  return num == 1 ? answer : -1;
+}
+
+// => 이럴수가.......
+// 메서드를 너무 유용하게 쓰지 못했다....
