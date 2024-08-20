@@ -1,0 +1,1 @@
+const solution = (str1, str2) => str2.indexOf(str1) >= 0 ? 1 : 0;
