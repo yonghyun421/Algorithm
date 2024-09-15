@@ -1,0 +1,1 @@
+const solution = (num_list, n) => num_list.filter(ele => ele === n).length !== 0 ? 1 : 0;
