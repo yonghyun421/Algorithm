@@ -1,0 +1,1 @@
+const solution = (my_string, target) => my_string.indexOf(target) >= 0 ? 1 : 0;
